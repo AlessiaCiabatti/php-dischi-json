@@ -7,6 +7,7 @@ createApp({
       title: 'Discs List',
       // il server.php viene chiamato da JS
       apiUrl: 'server.php',
+      arrayDisc: [],
     }
   },
   methods:{
@@ -15,6 +16,7 @@ createApp({
       axios.get(this.apiUrl)
       .then(result => {
         console.log(result.data)
+        this.arrayDisc = result.data;
       })
     }
   },
