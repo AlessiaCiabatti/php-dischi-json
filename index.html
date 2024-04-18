@@ -17,7 +17,7 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
   <!-- css -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 
   <title>Dischi</title>
 
@@ -26,17 +26,28 @@
 <body>
 
   <div id="app">
+    
+
+    <nav class="navbar">
+      <div class="container-fluid">
+        <img class="logo" src="/img/Spotify_logo_without_text.svg.png 13-11-59-267.png" alt="">
+        <form class="d-flex" role="search">
+          <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button> -->
+        </form>
+      </div>
+      
+    </nav>
 
     <div class="container my-5">
 
-      <h1 class="text-white mb-5  d-flex justify-content-center">{{title}}</h1>
 
       <div class="row row-cols-4 d-flex justify-content-between">
 
         <div v-for="(disco, index) in arrayDisc"
           :key="index"
           class="card text-center text-white mb-5" style="width: 25rem;">
-          <img :src="disco.poster" class="card-img-top" alt="...">
+          <img :src="disco.poster" class="card-img-top discs" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{disco.title}}</h5>
             <p class="card-text">{{disco.author}}</p>
@@ -46,6 +57,37 @@
 
       </div>
       
+      <!-- form -->
+      <div class="addTask">
+        <h3 class="text-white text-center ">Add New Task</h3>
+
+        <div class="input-group mb-3">
+          <!-- a-2 v-model.trim -->
+          <input
+           v-model.trim="addNewDisc.Name"
+           type="text" class="form-control" placeholder="Name" aria-label="Album Name" aria-describedby="basic-addon1">
+        </div>
+        
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Singer" aria-label="" aria-describedby="Singer/Band">
+        </div>
+
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Year" aria-label="Amount (to the nearest dollar)">
+        </div>
+        
+        <div class="mb-3">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Url" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+          </div>
+        </div>
+
+        <button
+          @click.stop="addNewDisc"
+        >Add</button>
+        
+      </div>
+
     </div>
 
   </div>

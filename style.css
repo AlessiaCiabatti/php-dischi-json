@@ -1,0 +1,58 @@
+body{
+  background-color: #1d2d3c;
+}
+
+.container-fluid{
+  width: 80%;
+}
+
+.container{
+  width: 80%;
+  height: calc(100vh - 100px);
+}
+
+.navbar{
+  background-color: #06131f;
+  height: 100px;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.my_menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  height: 100%;
+  width: 60px;
+}
+
+.card{
+  border: none;
+  background-color: #112030;
+  margin-top: 100px;
+}
+
+img.discs{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+
+h5.card-title{
+  margin-top: 20px;
+  margin-bottom: 15px
+}
+
+h5, .year{
+  font-size: 1.6rem;
+}
+
+.addTask{
+  margin-bottom: 50px;
+}

@@ -8,6 +8,13 @@ createApp({
       // il server.php viene chiamato da JS
       apiUrl: 'server.php',
       arrayDisc: [],
+
+      //a-1 nuovo disco
+      addNewDisc: {
+        Name: 'aaa',
+        Singer: '',
+        Year: '',
+      },
     }
   },
   methods:{
