@@ -7,11 +7,25 @@ $json_str = file_get_contents('dischi.json');
 $disc_list = json_decode($json_str);
 // var_dump($disc_list);
 
+
+
+
+// logica php
 /*
-
-LOGICA PHP
-
+  verifico che esista in POST la variable newDiscTitle
+  se esiste aggiungo un nuovo tack alla lista e poi aggiorno il file dischi.json con la lista decodificata in testo
 */
+
+if(isset($_POST['newDiscTitle'])){
+  $new_item = [
+    'title' => $_POST['newDiscTitle'],
+    'author' => $_POST['newDiscAuthor'],
+  ];
+  $disc_list[] = $new_item;
+  file_put_contents('dischi.json', json_encode($disc_list));
+}
+
+
 
 // trasformo il file php come se fosse un file json
 header('Content-Type: application/json');

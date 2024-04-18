@@ -12,7 +12,7 @@ createApp({
       //a-1 nuovo disco
       newDisc: {
         name: '',
-        singer: '',
+        author: '',
         year: '',
         url: '',
       },
@@ -48,7 +48,7 @@ createApp({
       */
     //  1
       data.append('newDiscTitle', this.newDisc.name);
-      data.append('newDiscSinger', this.newDisc.singer);
+      data.append('newDiscAuthor', this.newDisc.author);
       // console.log(data);
 
     // 2
