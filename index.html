@@ -17,7 +17,7 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
   <!-- css -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <title>Dischi</title>
 
@@ -25,20 +25,29 @@
 
 <body>
 
-  <div id="app" class="container my-5">
-    <h1>{{title}}</h1>
+  <div id="app">
 
-      <div v-for="(disco, index) in arrayDisc"
-      :key="index"
-      class="card" style="width: 18rem;">
-        <img :src="disco.poster" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{disco.title}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="container my-5">
+
+      <h1 class="text-white mb-5  d-flex justify-content-center">{{title}}</h1>
+
+      <div class="row row-cols-4 d-flex justify-content-between">
+
+        <div v-for="(disco, index) in arrayDisc"
+          :key="index"
+          class="card text-center text-white mb-5" style="width: 25rem;">
+          <img :src="disco.poster" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{disco.title}}</h5>
+            <p class="card-text">{{disco.author}}</p>
+            <p class="year">{{disco.year}}</p>
+          </div>
         </div>
+
       </div>
       
+    </div>
+
   </div>
   
   <script src="script.js"></script>
