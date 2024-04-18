@@ -28,6 +28,14 @@ if(isset($_POST['newDiscTitle'])){
 }
 
 
+// se mi arriva in POST indexToDelete elimino il post all'indice e aggiorno i dati
+if(isset($_POST['indexToDelete'])){
+  $indexToDelete = $_POST['indexToDelete'];
+  array_splice($disc_list, $indexToDelete, 1);
+  file_put_contents('dischi.json', json_encode($disc_list));
+}
+
+
 
 // trasformo il file php come se fosse un file json
 header('Content-Type: application/json');

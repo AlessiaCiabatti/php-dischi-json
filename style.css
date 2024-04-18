@@ -3,7 +3,7 @@ body{
 }
 
 .container-fluid{
-  width: 80%;
+  width: 70%;
 }
 
 .container{
@@ -14,7 +14,7 @@ body{
 .navbar{
   background-color: #06131f;
   height: 100px;
-  z-index: 1000;
+  z-index: 999;
   position: fixed;
   width: 100%;
   top: 0;
@@ -27,8 +27,15 @@ body{
 }
 
 .logo{
-  height: 100%;
-  width: 60px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+img.logo{
+  height: 70px;
+  width: 70px;
 }
 
 .card{
@@ -56,3 +63,8 @@ h5, .year{
 .addTask{
   margin-bottom: 50px;
 }
+
+.btn{
+  color: white;
+}
+

@@ -59,6 +59,19 @@ createApp({
         // console.log(result.data);
         this.arrayDisc = result.data;
       })
+    },
+
+    removeDisc(index){
+      console.log(index);
+
+      const data = new FormData();
+
+      data.append('indexToDelete', index);
+
+      axios.post(this.apiUrl, data)
+      .then(result => {
+        this.arrayDisc = result.data;
+      })
     }
   },
   mounted(){
