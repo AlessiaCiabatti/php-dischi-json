@@ -49,12 +49,15 @@ createApp({
     //  1
       data.append('newDiscTitle', this.newDisc.name);
       data.append('newDiscAuthor', this.newDisc.author);
+      data.append('newDiscYear', this.newDisc.year);
+      data.append('newDiscUrl', this.newDisc.url);
       // console.log(data);
 
     // 2
       axios.post(this.apiUrl, data)
       .then(result =>{
-        console.log(result.data)
+        // console.log(result.data);
+        this.arrayDisc = result.data;
       })
     }
   },

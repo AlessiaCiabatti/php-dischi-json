@@ -59,7 +59,7 @@
       
       <!-- form -->
       <div class="addTask">
-        <h3 class="text-white text-center ">Add New Task</h3>
+        <h3 class="text-white text-center ">Add New Disc</h3>
 
         <div class="input-group mb-3">
           <!-- a-2 v-model.trim -->
@@ -71,16 +71,20 @@
         <div class="input-group mb-3">
           <input 
           v-model.trim="newDisc.author"
-          type="text" class="form-control" placeholder="author" aria-label="" aria-describedby="Singer/Band">
+          type="text" class="form-control" placeholder="author" aria-label="" aria-describedby="author">
         </div>
 
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="year" aria-label="Amount (to the nearest dollar)">
+          <input
+           v-model.trim="newDisc.year"
+           type="text" class="form-control" placeholder="year" aria-label="Amount (to the nearest dollar)">
         </div>
         
         <div class="mb-3">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="url" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            <input
+            v-model.trim="newDisc.url"
+             type="text" class="form-control" placeholder="url" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
           </div>
         </div>
 

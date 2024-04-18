@@ -20,6 +20,8 @@ if(isset($_POST['newDiscTitle'])){
   $new_item = [
     'title' => $_POST['newDiscTitle'],
     'author' => $_POST['newDiscAuthor'],
+    'year' => $_POST['newDiscYear'],
+    'poster' => $_POST['newDiscUrl'],
   ];
   $disc_list[] = $new_item;
   file_put_contents('dischi.json', json_encode($disc_list));
